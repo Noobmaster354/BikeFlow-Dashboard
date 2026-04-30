@@ -1,4 +1,4 @@
 Dashboard URL (setelah deploy ke Streamlit Community Cloud):
-https://bike-sharing-satriofaza.streamlit.app
+https://bikeflow-dashboard-d2syyg9fceajl25kch4fau.streamlit.app/
 
 Catatan: Isi dengan URL deployment Anda setelah melakukan deploy ke Streamlit Community Cloud (https://share.streamlit.io)
