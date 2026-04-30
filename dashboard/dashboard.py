@@ -5,6 +5,10 @@ import matplotlib.pyplot as plt
 import matplotlib.ticker as mticker
 import seaborn as sns
 from matplotlib.colors import LinearSegmentedColormap
+from pathlib import Path
+
+# Direktori tempat dashboard.py berada
+BASE_DIR = Path(__file__).parent
 
 # ─── Page Config ─────────────────────────────────────────────────────────────
 st.set_page_config(
@@ -156,8 +160,8 @@ plt.rcParams.update({
 # ─── Load & Preprocess ───────────────────────────────────────────────────────
 @st.cache_data
 def load_data():
-    hour = pd.read_csv("/dashboard/main_data.csv", parse_dates=["dteday"])
-    day  = pd.read_csv("/dashboard/day_data.csv",  parse_dates=["dteday"])
+    hour = pd.read_csv(BASE_DIR / "main_data.csv", parse_dates=["dteday"])
+    day  = pd.read_csv(BASE_DIR / "day_data.csv",  parse_dates=["dteday"])
 
     season_map  = {1:"Spring",2:"Summer",3:"Fall",4:"Winter"}
     year_map    = {0:"2011",1:"2012"}
