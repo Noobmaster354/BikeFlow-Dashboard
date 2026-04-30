@@ -156,8 +156,8 @@ plt.rcParams.update({
 # ─── Load & Preprocess ───────────────────────────────────────────────────────
 @st.cache_data
 def load_data():
-    hour = pd.read_csv("main_data.csv", parse_dates=["dteday"])
-    day  = pd.read_csv("day_data.csv",  parse_dates=["dteday"])
+    hour = pd.read_csv("/dashboard/main_data.csv", parse_dates=["dteday"])
+    day  = pd.read_csv("/dashboard/day_data.csv",  parse_dates=["dteday"])
 
     season_map  = {1:"Spring",2:"Summer",3:"Fall",4:"Winter"}
     year_map    = {0:"2011",1:"2012"}
